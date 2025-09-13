@@ -2,50 +2,115 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
+  <title>Green Paradise Cần Giờ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vinhomes Cần Giờ - Green Paradise</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {font-family: Arial, sans-serif; line-height: 1.6; background:#f9f9f9; color:#333;}
+    header {
+      background: url("banner.jpg") no-repeat center/cover;
+      height: 60vh; display: flex; align-items: center; justify-content: center;
+      color: white; text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    }
+    header h1 {font-size: 3rem; text-align:center;}
+    section {padding: 50px 10%; background: #fff;}
+    section:nth-child(even) {background: #f5f8fa;}
+    h2 {color: #2c3e50; margin-bottom: 20px;}
+    .projects {display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap:20px;}
+    .projects img {width:100%; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+    .form-container {
+      background:#fff; padding:30px; border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1); max-width:400px; margin:auto;
+    }
+    input, button {
+      width: 100%; padding: 12px; margin: 8px 0;
+      border: 1px solid #ccc; border-radius: 8px;
+    }
+    button {
+      background: #27ae60; color:white; font-weight:bold; cursor:pointer; border:none;
+    }
+    button:hover {background:#219150;}
+    .zalo-btn {
+      display:block; text-align:center; margin-top:20px;
+      background:#0068FF; color:#fff; padding:12px; border-radius:8px;
+      text-decoration:none; font-weight:bold;
+    }
+    .zalo-btn:hover {background:#0052cc;}
+    footer {text-align:center; padding:20px; background:#2c3e50; color:white;}
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-  <!-- Hero Section -->
-  <header class="bg-gradient-to-r from-blue-700 to-cyan-500 text-white py-20 px-6 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">🌴 Vinhomes Cần Giờ - Green Paradise</h1>
-    <p class="text-lg md:text-xl">Siêu đô thị biển sinh thái 2.870ha – Khởi công 2025 – Biểu tượng mới tại TP.HCM</p>
+<body>
+  <!-- Banner -->
+  <header>
+    <h1>Dự án Green Paradise Cần Giờ</h1>
   </header>
 
-  <!-- About Section -->
-  <section class="py-16 px-6 max-w-5xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-8">Tổng quan dự án</h2>
-    <div class="grid md:grid-cols-2 gap-8">
-      <ul class="space-y-4 text-lg">
-        <li>✅ Quy mô: 2.870 ha</li>
-        <li>✅ Khởi công: 2025</li>
-        <li>✅ Tiện ích: Sân golf Tiger Woods, tàu điện cao tốc, nhà hát Blue Waves</li>
-        <li>✅ Toà tháp biểu tượng 108 tầng</li>
-      </ul>
-      <div class="bg-white shadow-lg rounded-xl p-6">
-        <img src="https://vinhomes.vn/sites/default/files/2021-12/vinhomes-can-gio_1.jpg" alt="Vinhomes Cần Giờ" class="rounded-lg">
-      </div>
+  <!-- Thông tin dự án -->
+  <section>
+    <h2>Thông tin Quy hoạch 1/500</h2>
+    <p>
+      Dự án Green Paradise Cần Giờ được phê duyệt theo quy hoạch 1/500 với đầy đủ hạ tầng đồng bộ:
+      khu biệt thự ven sông, công viên cây xanh, trung tâm thương mại, trường học và bến du thuyền.
+      Vị trí đắc địa ven biển, liền kề các tuyến giao thông huyết mạch kết nối trung tâm TP.HCM.
+    </p>
+    <div class="projects">
+      <img src="duan1.jpg" alt="Phối cảnh dự án 1">
+      <img src="duan2.jpg" alt="Phối cảnh dự án 2">
+      <img src="duan3.jpg" alt="Phối cảnh dự án 3">
     </div>
   </section>
 
-  <!-- Contact Form -->
-  <section class="bg-gradient-to-r from-green-100 to-blue-100 py-16 px-6">
-    <h2 class="text-3xl font-bold text-center mb-8">Đăng ký nhận thông tin chi tiết</h2>
-    <form action="https://formspree.io/f/xxxxabcd" method="POST" class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg space-y-6">
-      <input type="text" name="name" placeholder="Họ và tên" required class="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300">
-      <input type="tel" name="phone" placeholder="Số điện thoại" required class="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300">
-      <input type="email" name="email" placeholder="Email" required class="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300">
-      <input type="text" name="address" placeholder="Địa chỉ" class="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300">
-      <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">Gửi thông tin</button>
-    </form>
+  <!-- Form đăng ký -->
+  <section>
+    <h2>Đăng ký tư vấn</h2>
+    <div class="form-container">
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Họ và tên" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Số điện thoại" required>
+        <button type="submit">Gửi thông tin</button>
+      </form>
+      <p id="msg" style="text-align:center; color:green;"></p>
+      <!-- Nút zalo -->
+      <a class="zalo-btn" href="https://zalo.me/0962299939" target="_blank">Chat Zalo với chúng tôi</a>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-6 text-center">
-    <p>Liên hệ: Hiếu Bùi – BĐS 24h | 📞 0962 299 939</p>
+  <footer>
+    <p>&copy; 2025 Green Paradise Cần Giờ - Phát triển bởi Hieubui</p>
   </footer>
 
+  <script>
+    const scriptURL = "👉 DÁN LINK WEB APP GOOGLE SCRIPT Ở ĐÂY 👈"; 
+
+    document.getElementById("contactForm").addEventListener("submit", e => {
+      e.preventDefault();
+      const formData = {
+        name: e.target.name.value,
+        email: e.target.email.value,
+        phone: e.target.phone.value
+      };
+
+      fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: { "Content-Type": "application/json" }
+      })
+      .then(res => res.json())
+      .then(res => {
+        if(res.result === "success"){
+          document.getElementById("msg").innerText = "Đăng ký thành công!";
+          e.target.reset();
+        } else {
+          document.getElementById("msg").innerText = "Có lỗi xảy ra!";
+        }
+      })
+      .catch(err => {
+        document.getElementById("msg").innerText = "Lỗi kết nối!";
+        console.error(err);
+      });
+    });
+  </script>
 </body>
 </html>
