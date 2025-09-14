@@ -276,18 +276,34 @@ giá đất Cần Giờ, mua bán bất động sản Cần Giờ, Vingroup Cầ
 </head>
 
 
-<!-- HERO -->
-<header id="top" class="hero" role="banner">
+<header id="top" class="hero" role="banner" style="text-align:center; padding:100px 20px; color:#fff;">
   <div class="hero-inner">
     <h1 class="neon-blink">ĐÔ THỊ LẤN BIỂN HÀNG ĐẦU VIỆT NAM</h1>
-    <h2 class="neon-sub">SIÊU ĐÔ THỊ BIỂN SINH THÁI – QUY HOẠCH 1/500</h2>
-    <p class="lead">“Điểm đến vàng cho nhà đầu tư BĐS tại TP.HCM”
-
-“Đón sóng đầu tư cùng đại đô thị ven biển TP.HCM”
-
-“Sinh lời bền vững – Cơ hội hiếm có giữa lòng TP.HCM”</p>
+    <h2 class="neon-blink">SIÊU ĐÔ THỊ BIỂN SINH THÁI – QUY HOẠCH 1/500</h2>
+    <p class="neon-blink">
+      “Điểm đến vàng cho nhà đầu tư BĐS tại TP.HCM” <br>
+      “Đón sóng đầu tư cùng đại đô thị ven biển TP.HCM” <br>
+      “Sinh lời bền vững – Cơ hội hiếm có giữa lòng TP.HCM”
+    </p>
   </div>
 </header>
+
+<style>
+.neon-blink {
+  color: #fff;
+  text-shadow: 
+    2px 2px 6px black,
+    0 0 8px #fff,
+    0 0 12px #fff;
+  animation: flicker 2s infinite alternate;
+}
+
+@keyframes flicker {
+  0%   { opacity: 1; text-shadow: 2px 2px 6px black, 0 0 8px #fff, 0 0 12px #fff; }
+  50%  { opacity: 0.85; text-shadow: 2px 2px 6px black, 0 0 4px #fff, 0 0 8px #fff; }
+  100% { opacity: 1; text-shadow: 2px 2px 6px black, 0 0 10px #fff, 0 0 18px #fff; }
+}
+</style>
 
 
 <!-- Nút hotline bám đuổi -->
@@ -1601,6 +1617,7 @@ document.addEventListener('keydown', (e)=>{
 </script>
 </body>
 </html>
+
 
 
 
