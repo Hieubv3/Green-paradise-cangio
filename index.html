@@ -2176,12 +2176,12 @@ function closeModal() {
   <button id="volume-btn" 
           style="background:linear-gradient(145deg, #06c755, #04a944); 
                  border:none; border-radius:50%; 
-                 width:40px; height:40px; cursor:pointer; 
+                 width:60px; height:60px; cursor:pointer; 
                  box-shadow:0 6px 12px rgba(0,0,0,0.25); 
                  display:flex; align-items:center; justify-content:center; 
                  font-size:28px; color:#fff; 
                  animation:pulse 1.5s infinite;">
-    ▶️
+    🔊
   </button>
 
   <audio id="bg-music" loop>
@@ -2191,7 +2191,7 @@ function closeModal() {
 
 <style>
 @keyframes pulse {
-  0%, 100% { transform:scale(1); }
+  0%, 90% { transform:scale(1); }
   50% { transform:scale(1.2); }
 }
 </style>
@@ -2200,18 +2200,25 @@ function closeModal() {
   const btn = document.getElementById("volume-btn");
   const music = document.getElementById("bg-music");
 
+  // mặc định nhạc tắt
+  let isPlaying = false;
+
   btn.addEventListener("click", () => {
-    if (music.paused) {
+    if (!isPlaying) {
       music.play();
-      btn.textContent = "⏸️"; // đang phát thì hiện nút tạm dừng
+      btn.textContent = "⏸️"; // đang phát → hiện icon Pause
+      isPlaying = true;
     } else {
       music.pause();
-      btn.textContent = "▶️"; // đang dừng thì hiện nút phát
+      btn.textContent = "🔊"; // dừng → hiện icon Loa
+      isPlaying = false;
     }
   });
 </script>
+</script>
 </body>
 </html>
+
 
 
 
