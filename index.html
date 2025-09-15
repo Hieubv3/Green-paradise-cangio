@@ -205,16 +205,35 @@ giá đất Cần Giờ, mua bán bất động sản Cần Giờ, Vingroup Cầ
   </span>
 </div>
 <!-- Thanh navbar -->
-<div style="background:#005bbb; height:60px; display:flex; align-items:flex-end; justify-content:center;">
+<div style="background:#005bbb; display:flex; align-items:center; justify-content:center;">
   <!-- Menu ngang -->
   <ul role="menubar" aria-label="Main menu" 
-      style="list-style:none; display:flex; justify-content:space-between; align-items:flex-end; margin:0; padding:0; width:800px;">
-    <li role="none"><a role="menuitem" href="#about" style="color:#fff; text-decoration:none; font-size:18px; line-height:60px; white-space:nowrap; font-weight:bold; text-shadow:2px 2px 4px black;">Giới thiệu</a></li>
-    <li role="none"><a role="menuitem" href="#planning" style="color:#fff; text-decoration:none; font-size:18px; line-height:60px; white-space:nowrap; font-weight:bold; text-shadow:2px 2px 4px black;">QH 1/500</a></li>
-    <li role="none"><a role="menuitem" href="#zones" style="color:#fff; text-decoration:none; font-size:18px; line-height:60px; white-space:nowrap; font-weight:bold; text-shadow:2px 2px 4px black;">Phân khu</a></li>
-    <li role="none"><a role="menuitem" href="#progress" style="color:#fff; text-decoration:none; font-size:18px; line-height:60px; white-space:nowrap; font-weight:bold; text-shadow:2px 2px 4px black;">Tiến độ</a></li>
-    <li role="none"><a role="menuitem" href="#form" style="color:#fff; text-decoration:none; font-size:18px; line-height:60px; white-space:nowrap; font-weight:bold; text-shadow:2px 2px 4px black;">Đăng ký</a></li>
+      style="list-style:none; display:flex; flex-wrap:wrap; justify-content:center; align-items:center; margin:0; padding:0; max-width:100%;">
+
+    <li role="none"><a role="menuitem" href="#about" style="padding:0 12px; color:#fff; text-decoration:none; font-size:18px; line-height:60px; white-space:nowrap; font-weight:bold; text-shadow:2px 2px 4px black;">Giới thiệu</a></li>
+
+    <li role="none"><a role="menuitem" href="#planning" style="padding:0 12px; color:#fff; text-decoration:none; font-size:18px; line-height:60px; white-space:nowrap; font-weight:bold; text-shadow:2px 2px 4px black;">QH 1/500</a></li>
+
+    <li role="none"><a role="menuitem" href="#zones" style="padding:0 12px; color:#fff; text-decoration:none; font-size:18px; line-height:60px; white-space:nowrap; font-weight:bold; text-shadow:2px 2px 4px black;">Phân khu</a></li>
+
+    <li role="none"><a role="menuitem" href="#progress" style="padding:0 12px; color:#fff; text-decoration:none; font-size:18px; line-height:60px; white-space:nowrap; font-weight:bold; text-shadow:2px 2px 4px black;">Tiến độ</a></li>
+
+    <li role="none"><a role="menuitem" href="#form" style="padding:0 12px; color:#fff; text-decoration:none; font-size:18px; line-height:60px; white-space:nowrap; font-weight:bold; text-shadow:2px 2px 4px black;">Đăng ký</a></li>
+
   </ul>
+</div>
+
+<style>
+  @media (max-width:768px) {
+    ul[role="menubar"] {
+      flex-direction: column; 
+    }
+    ul[role="menubar"] li a {
+      line-height: 45px; 
+      font-size: 16px;
+    }
+  }
+</style>
 
 </div>
 
@@ -1608,6 +1627,7 @@ document.addEventListener('keydown', (e)=>{
 </script>
 </body>
 </html>
+
 
 
 
