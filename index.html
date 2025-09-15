@@ -2170,21 +2170,21 @@ function closeModal() {
 </script>
 </body>
 
-<!-- Nút Volume nổi -->
+<!-- Nút Play/Pause nổi -->
 <div id="volume-control" 
      style="position:fixed; bottom:160px; right:20px; z-index:1000;">
   <button id="volume-btn" 
-          style="background:linear-gradient(145deg, #06c75600, #04a94300); 
+          style="background:linear-gradient(145deg, #06c755, #04a944); 
                  border:none; border-radius:50%; 
                  width:60px; height:60px; cursor:pointer; 
                  box-shadow:0 6px 12px rgba(0,0,0,0.25); 
                  display:flex; align-items:center; justify-content:center; 
                  font-size:28px; color:#fff; 
                  animation:pulse 1.5s infinite;">
-    🔊
+    ▶️
   </button>
 
-  <audio id="bg-music" autoplay loop>
+  <audio id="bg-music" loop>
     <source src="nhac-nen.mp3" type="audio/mpeg">
   </audio>
 </div>
@@ -2199,18 +2199,17 @@ function closeModal() {
 <script>
   const btn = document.getElementById("volume-btn");
   const music = document.getElementById("bg-music");
-  let isMuted = false;
 
   btn.addEventListener("click", () => {
-    if (isMuted) {
-      music.muted = false;
-      btn.textContent = "🔊"; 
+    if (music.paused) {
+      music.play();
+      btn.textContent = "⏸️"; // đang phát thì hiện nút tạm dừng
     } else {
-      music.muted = true;
-      btn.textContent = "🔇"; 
+      music.pause();
+      btn.textContent = "▶️"; // đang dừng thì hiện nút phát
     }
-    isMuted = !isMuted;
   });
 </script>
 </body>
 </html>
+
