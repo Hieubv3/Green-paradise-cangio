@@ -1594,6 +1594,50 @@ document.addEventListener('keydown', (e)=>{
      z-index:999;">
   📑 Tải Quy Hoạch 1/500
 </a>
+
+<!-- Form đăng ký (ẩn mặc định) -->
+<div id="form-dang-ky" 
+     style="display:none;
+            position:fixed;
+            bottom:80px;
+            right:20px;
+            background:#fff;
+            border:1px solid #ccc;
+            padding:20px;
+            border-radius:10px;
+            width:300px;
+            box-shadow:0 4px 12px rgba(0,0,0,0.3);
+            z-index:1000;">
+  <form onsubmit="xuLyForm(event)">
+    <h3>Đăng ký nhận tài liệu</h3>
+    <label>Họ tên</label><br>
+    <input type="text" required style="width:100%;padding:6px;margin:6px 0;"><br>
+    <label>Email</label><br>
+    <input type="email" required style="width:100%;padding:6px;margin:6px 0;"><br>
+    <label>SĐT</label><br>
+    <input type="tel" required style="width:100%;padding:6px;margin:6px 0;"><br>
+
+    <button type="submit" 
+            style="background:green;color:#fff;padding:10px 16px;border:none;border-radius:6px;cursor:pointer;">
+      Gửi & Nhận link
+    </button>
+  </form>
+</div>
+
+<script>
+function hienForm() {
+  document.getElementById("form-dang-ky").style.display = "block";
+}
+
+function xuLyForm(e) {
+  e.preventDefault();
+  // Ẩn form sau khi gửi
+  document.getElementById("form-dang-ky").style.display = "none";
+  // 👉 Chuyển sang link Google Sheet của bạn
+  window.open("https://docs.google.com/spreadsheets/d/1J5wYq3GljFhO4a1IP6QoFVLFgCr91e2ueRMipLBPUxQ/edit?gid=0#gid=0", "_blank");
+}
+</script>
+
 <section id="form" class="fade-up" aria-labelledby="form-title">
   <h2 id="form-title">Đăng ký nhận thông tin</h2>
   <p class="muted">Điền thông tin – chúng tôi sẽ liên hệ tư vấn chi tiết.</p>
@@ -2267,6 +2311,7 @@ function closeModal() {
 
 </body>
 </html>
+
 
 
 
