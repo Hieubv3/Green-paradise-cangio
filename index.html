@@ -1608,19 +1608,21 @@ document.addEventListener('keydown', (e)=>{
             width:300px;
             box-shadow:0 4px 12px rgba(0,0,0,0.3);
             z-index:1000;">
-  <form onsubmit="xuLyForm(event)">
+  <form id="dangKyForm" 
+        action="https://script.google.com/macros/s/AKfycbyL_bkqqKk66KXPwsmCGKyHZKfYX8_5QUZ4-Q87mf1JihAXKW5AyjRyP5RUmkEinDmS/exec">
     <h3>Đăng ký nhận tài liệu</h3>
     <label>Họ tên</label><br>
-    <input type="text" required style="width:100%;padding:6px;margin:6px 0;"><br>
+    <input type="text" name="name" required style="width:100%;padding:6px;margin:6px 0;"><br>
     <label>Email</label><br>
-    <input type="email" required style="width:100%;padding:6px;margin:6px 0;"><br>
+    <input type="email" name="email" required style="width:100%;padding:6px;margin:6px 0;"><br>
     <label>SĐT</label><br>
-    <input type="tel" required style="width:100%;padding:6px;margin:6px 0;"><br>
+    <input type="tel" name="phone" required style="width:100%;padding:6px;margin:6px 0;"><br>
 
     <button type="submit" 
             style="background:green;color:#fff;padding:10px 16px;border:none;border-radius:6px;cursor:pointer;">
       Gửi & Nhận link
     </button>
+    <p id="formStatus" style="margin-top:10px;font-weight:bold;"></p>
   </form>
 </div>
 
@@ -1629,14 +1631,41 @@ function hienForm() {
   document.getElementById("form-dang-ky").style.display = "block";
 }
 
-function xuLyForm(e) {
+document.getElementById("dangKyForm").addEventListener("submit", async function(e){
   e.preventDefault();
-  // Ẩn form sau khi gửi
-  document.getElementById("form-dang-ky").style.display = "none";
-  // 👉 Chuyển sang link Google Sheet của bạn
-  window.open("https://docs.google.com/spreadsheets/d/1J5wYq3GljFhO4a1IP6QoFVLFgCr91e2ueRMipLBPUxQ/edit?gid=0#gid=0", "_blank");
-}
+  const form = e.target;
+  const formData = new FormData(form);
+  const status = document.getElementById("formStatus");
+
+  status.style.color = "blue";
+  status.textContent = "⏳ Đang gửi...";
+
+  try {
+    const response = await fetch(form.action, { method: "POST", body: formData });
+    const data = await response.json();
+
+    if (data.result === "success") {
+      status.style.color = "green";
+      status.textContent = "✅ Gửi thành công!";
+      form.reset();
+
+      // Ẩn form sau 1 giây
+      setTimeout(() => {
+        document.getElementById("form-dang-ky").style.display = "none";
+        status.textContent = "";
+      }, 1000);
+    } else {
+      status.style.color = "red";
+      status.textContent = "❌ Có lỗi khi gửi.";
+    }
+  } catch (err) {
+    console.error(err);
+    status.style.color = "red";
+    status.textContent = "⚠️ Lỗi kết nối.";
+  }
+});
 </script>
+
 
 <section id="form" class="fade-up" aria-labelledby="form-title">
   <h2 id="form-title">Đăng ký nhận thông tin</h2>
@@ -2311,6 +2340,7 @@ function closeModal() {
 
 </body>
 </html>
+
 
 
 
