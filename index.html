@@ -1577,7 +1577,23 @@ document.addEventListener('keydown', (e)=>{
     }
   }
 </style>
-
+<!-- Nút bám đuổi -->
+<a id="btn-tai-lieu" onclick="hienForm()" 
+   style="
+     position:fixed;
+     bottom:250px; 
+     right:30px;
+     background:#f72c2c;
+     color:#fff;
+     padding:14px 20px;
+     border-radius:50px;
+     text-decoration:none;
+     font-weight:bold;
+     box-shadow:0 4px 8px rgba(0,0,0,0.2);
+     cursor:pointer;
+     z-index:999;">
+  📑 Tải Quy Hoạch 1/500
+</a>
 <section id="form" class="fade-up" aria-labelledby="form-title">
   <h2 id="form-title">Đăng ký nhận thông tin</h2>
   <p class="muted">Điền thông tin – chúng tôi sẽ liên hệ tư vấn chi tiết.</p>
@@ -2251,6 +2267,7 @@ function closeModal() {
 
 </body>
 </html>
+
 
 
 
