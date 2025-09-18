@@ -349,6 +349,20 @@ window.onclick = function(event) {
           <li>Công viên chuyên đề, sân golf, trung tâm văn hóa – hội nghị.</li>
           <li><strong>An cư lâu dài kết hợp nghỉ dưỡng cao cấp</strong>.</li>
         </ul>
+      <script>
+    function toggleZone(el){
+      if(el.classList.contains('open')){
+        el.classList.remove('open');
+        return;
+      }
+      document.querySelectorAll('.zone-item').forEach(item=>{
+        item.classList.remove('open');
+      });
+      el.classList.add('open');
+    }
+  </script>
+</body>
+</html>
       </div>
     </div>
 
@@ -864,3 +878,4 @@ function closePopup() {
   <script src="menu.js"></script>
 </body>
 </html>
+
