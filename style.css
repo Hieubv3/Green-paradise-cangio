@@ -770,10 +770,10 @@ section h2,
 }
 body { font-family: Arial, sans-serif; margin:0; }
 
-/* Nút bám đuổi bên phải */
+/* Nút bám đuổi bên phải tải bảng hàng */
 .floating-btn {
   position: fixed;
-  bottom: 20px;
+  bottom: 80px;
   right: 20px;
   background: #d32f2f;
   color: #fff;
@@ -855,4 +855,5 @@ body { font-family: Arial, sans-serif; margin:0; }
 
 #popupClose:hover {
   background: #005f4d;
+
 }
