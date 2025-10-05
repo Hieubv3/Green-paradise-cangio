@@ -79,9 +79,7 @@ Kết hợp với khu đô thị biển Vinhomes, đây là điểm đến giao 
 
 ---
 
-<!-- SEO & SCHEMA HIDDEN -->
-<!--
-# SEO ẩn cho Google Index
+<!-- SEO & SCHEMA HIDDEN --
 
 ## Từ khóa chính:
 vinhomes cần giờ, vinhomes paradise, căn hộ cần giờ, đất nền cần giờ, biệt thự biển cần giờ, shophouse cần giờ, vinhomes paradise cần giờ bảng giá, cảng trung chuyển cần giờ, hội nghinh ông cần giờ, đầu tư bất động sản biển, esg bất động sản, vinhomes paradise esg++, green living cần giờ
