@@ -3,176 +3,535 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Vinhomes Paradise Cần Giờ – Thành phố biển sinh thái chuẩn ESG++ đẳng cấp quốc tế</title>
-<meta name="description" content="Vinhomes Paradise Cần Giờ – khu đô thị biển sinh thái 2.870ha theo tiêu chuẩn ESG++ của Vingroup. Quy tụ biệt thự, căn hộ, shophouse cao cấp, phát triển bền vững, thân thiện môi trường." />
-<meta name="keywords" content="Vinhomes Paradise Cần Giờ, ESG++, khu đô thị sinh thái, biệt thự Cần Giờ, shophouse, căn hộ Vinhomes, bất động sản xanh, dự án Vingroup" />
-<meta name="author" content="Vinhomes Cần Giờ" />
+<title>Hiếu Bùi BDS 24h – Chuyên viên tư vấn bất động sản Vinhomes hàng đầu</title>
+<meta name="description" content="Hiếu Bùi BDS 24h - Tư vấn mua bán cho thuê chuyển nhượng bất động sản Vinhomes, Masterise, MIK Group, Sun Group." />
+<meta name="keywords" content="Hiếu Bùi, BDS 24h, bất động sản, Vinhomes, tư vấn đầu tư" />
+<meta name="author" content="Hiếu Bùi BDS 24h" />
 
-<meta property="og:title" content="Vinhomes Cần Giờ - Thành phố biển sinh thái quốc tế" />
-<meta property="og:description" content="Dự án Vinhomes Cần Giờ quy mô 2.870ha, tích hợp biệt thự, căn hộ, bến du thuyền tiêu chuẩn nghỉ dưỡng quốc tế." />
-<meta property="og:image" content="banner1.jpg" />
-<meta property="og:type" content="website" />
-
-<link rel="stylesheet" href="style.css" />
 <style>
-  nav.main-nav a {
-    color: rgb(0, 0, 0) !important;
-    margin: 0 10px;
-    text-decoration: none;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  nav.main-nav a:hover {
-    font-weight: 700;
+
+  body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0a2410 0%, #1a4d2e 50%, #0d3a1f 100%);
+    color: #333;
   }
+
   html {
     scroll-behavior: smooth;
   }
 
-  /* CSS cho các khối nội dung */
+  /* Header */
+  header {
+    background: linear-gradient(135deg, #0d3a1f, #1a4d2e);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(34, 197, 94, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo {
+    font-size: 22px;
+    font-weight: 800;
+    color: #22c55e;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  nav.main-nav a {
+    color: #22c55e !important;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+    font-size: 14px;
+  }
+
+  nav.main-nav a:hover {
+    color: #4ade80 !important;
+    font-weight: 700;
+  }
+
+  /* Banner */
+  .banner {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .banner-text {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 15px;
+  }
+
+  .banner-text h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #22c55e;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .banner-text p {
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 24px;
+    padding: 10px 15px;
+    background: rgba(34, 197, 94, 0.8);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+
+  .prev:hover, .next:hover {
+    background: rgba(34, 197, 94, 1);
+    transform: scale(1.1);
+  }
+
+  .prev { left: 20px; }
+  .next { right: 20px; }
+
+  .dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .dot.active {
+    background: #22c55e;
+    width: 30px;
+    border-radius: 6px;
+  }
+
+  /* Sections */
+  section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  section h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #0d3a1f;
+    margin-bottom: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
   .section-item {
-    display:flex;
-    background:#fff;
-    border-radius:15px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    overflow:hidden;
-    cursor:pointer;
-    margin-top:15px;
+    display: flex;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .section-item:hover {
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.2);
+    transform: translateY(-5px);
   }
 
   .section-item .image {
-    flex:2;
+    flex: 2;
   }
 
   .section-item .image img {
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
   }
 
   .section-item .content {
-    flex:1;
-    padding:20px;
+    flex: 1;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  /* CSS cho Vị trí */
-  .map-btn {
-    padding: 10px 15px;
-    background: #ff0000;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+  .section-info h3 {
+    font-size: 22px;
+    color: #0d3a1f;
+    margin-bottom: 10px;
+    font-weight: 800;
   }
 
-  /* CSS cho Popup Map */
-  #mapPopup {
-    display:none; 
-    position:fixed; 
-    top:0; 
-    left:0; 
-    width:100%; 
-    height:100%; 
-    background:rgba(0,0,0,0.6); 
-    justify-content:center; 
-    align-items:center; 
-    z-index:9999;
-  }
-  .map-content {
-    background:#fff; 
-    padding:20px; 
-    border-radius:10px; 
-    max-width:900px; 
-    width:90%; 
-    position:relative;
+  .section-info p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
   }
 
-  /* CSS cho Phân khu chức năng */
+  .section-content {
+    margin-top: 15px;
+    color: #444;
+    line-height: 1.8;
+    display: none;
+  }
+
+  .section-content.show {
+    display: block;
+  }
+
+  .section-content h4 {
+    color: #22c55e;
+    margin: 15px 0 8px;
+    font-weight: 700;
+  }
+
+  .section-content ul {
+    margin: 10px 0 0 20px;
+  }
+
+  .section-content li {
+    margin: 6px 0;
+    color: #555;
+  }
+
+  /* Zones Grid */
   .zones-grid {
-    margin-top:20px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
   }
-  .zone-item {
-    background:#fff;
-    border-radius:10px;
-    box-shadow:0 3px 10px rgba(0,0,0,.08);
-    overflow:hidden;
-    transition:all .2s;
-    cursor:pointer;
-  }
-  .zone-item img {
-    width:100%;
-    height:180px;
-    object-fit:cover;
-    display:block;
-  }
-  .zone-info {
-    padding:12px 16px;
-    border-bottom:1px solid #eee;
-  }
-  .zone-info h3 {margin:0;color:#0077cc;font-size:1.1rem;}
-  .zone-info p {margin:6px 0 0;color:#555;font-size:.9rem;}
-  .zone-content {
-    display:none;
-    padding:14px 20px;
-    color:#444;
-    line-height:1.6;
-  }
-  .zone-content ul {margin:10px 0 0;padding-left:20px}
-  .zone-content ul li{margin-bottom:6px}
-  .zone-item.open .zone-content {display:block;}
 
-  /* CSS cho Tiện ích */
-  #utilities {
-    padding: 50px 20px;
-  }
-  #utilities h2 {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  .utilities-grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
-  }
-  .utility-item {
+  .zone-item {
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    padding: 15px;
+    box-shadow: 0 3px 12px rgba(34, 197, 94, 0.1);
+    overflow: hidden;
+    transition: all 0.3s;
     cursor: pointer;
-    transition: all 0.3s ease;
   }
-  .utility-item img {
+
+  .zone-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(34, 197, 94, 0.2);
+  }
+
+  .zone-item img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-radius: 10px;
+    display: block;
   }
+
+  .zone-info {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .zone-info h3 {
+    margin: 0;
+    color: #0d3a1f;
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  .zone-info p {
+    margin: 6px 0 0;
+    color: #666;
+    font-size: 13px;
+  }
+
+  .zone-content {
+    display: none;
+    padding: 15px;
+    color: #555;
+    line-height: 1.6;
+    font-size: 14px;
+  }
+
+  .zone-content ul {
+    margin: 10px 0 0 20px;
+  }
+
+  .zone-content li {
+    margin: 6px 0;
+  }
+
+  .zone-item.open .zone-content {
+    display: block;
+  }
+
+  /* Utilities Grid */
+  .utilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .utility-item {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .utility-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(34, 197, 94, 0.2);
+  }
+
+  .utility-item img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .utility-text {
+    padding: 15px;
+  }
+
   .utility-text h3 {
-    margin: 10px 0 8px;
-    font-size: 1.2rem;
-    color: #00796b;
+    margin: 0 0 8px;
+    font-size: 16px;
+    color: #0d3a1f;
+    font-weight: 800;
   }
+
   .utility-text p {
     margin: 5px 0;
-    color: #555;
-    font-size: 0.95rem;
+    color: #666;
+    font-size: 13px;
     line-height: 1.5;
   }
+
   .utility-text .detail {
     display: none;
     margin-top: 10px;
     padding-top: 10px;
     border-top: 1px solid #eee;
+    font-size: 12px;
   }
+
   .utility-item.active .detail {
     display: block;
   }
 
-  /* CSS cho Popup Form */
-  .popup-box {
+  /* Contact Section */
+  .contact-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.1);
+    max-width: 600px;
+    margin: 30px auto;
+  }
+
+  .contact-card table {
+    width: 100%;
+  }
+
+  .contact-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #22c55e;
+    object-fit: cover;
+  }
+
+  .contact-card p {
+    margin: 8px 0;
+    color: #333;
+  }
+
+  .contact-card a {
+    color: #22c55e;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  /* Button */
+  .cta-btn, #registerBtn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #22c55e, #4ade80);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .cta-btn:hover, #registerBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.3);
+  }
+
+  .policy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .policy-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(34, 197, 94, 0.1);
+    transition: all 0.3s;
+  }
+
+  .policy-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(34, 197, 94, 0.2);
+  }
+
+  .policy-item h3 {
+    color: #0d3a1f;
+    margin-bottom: 10px;
+    font-weight: 800;
+  }
+
+  .policy-item p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .policy-btn {
+    color: #22c55e;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  /* Floating Buttons */
+  .floating-buttons {
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 999;
+  }
+
+  .btn-call, .btn-zalo {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 700;
+    color: #fff;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-call {
+    background: #d62828;
+  }
+
+  .btn-call:hover {
+    transform: scale(1.15);
+    background: #b91f1f;
+  }
+
+  .btn-zalo {
+    background: #0068ff;
+  }
+
+  .btn-zalo:hover {
+    transform: scale(1.15);
+    background: #0052cc;
+  }
+
+  .floating-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+  }
+
+  .floating-btn a {
+    background: linear-gradient(135deg, #22c55e, #4ade80);
+    padding: 12px 15px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    width: auto;
+    height: auto;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+  }
+
+  .floating-btn a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+  }
+
+  /* Popup */
+  #popupBox {
     display: none;
     position: fixed;
     top: 50%;
@@ -180,76 +539,82 @@
     transform: translate(-50%, -50%);
     background: #fff;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
     z-index: 10000;
+    max-width: 400px;
+    width: 90%;
   }
+
+  #popupBox h2 {
+    color: #0d3a1f;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 20px;
+  }
+
+  #popupBox input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #22c55e;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  #popupBox button {
+    width: 100%;
+    padding: 12px;
+    background: #22c55e;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  #popupBox button:hover {
+    background: #4ade80;
+  }
+
   .close-btn {
     position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 20px;
+    font-size: 24px;
     cursor: pointer;
-  }
-  .success-msg {
-    display: none;
-    margin-top: 15px;
-    color: green;
-    font-weight: bold;
+    color: #999;
   }
 
-  /* CSS nháy chữ */
   @keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0.3; }
-    100% { opacity: 1; }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
   }
 
-  /* CSS Popup Contact */
-  .popup {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    animation: fadeIn 0.3s ease;
-  }
-  .popup-content.square {
-    background: #fff;
-    padding: 20px;
-    border-radius: 0;
-    text-align: center;
-    width: 280px;
-    height: 180px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    animation: slideDown 0.3s ease;
-  }
-  #popupClose {
-    padding: 8px 16px;
-    background: #00796b;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    display: none;
-  }
-  
-  /* Mobile Responsive */
-  @media (max-width:768px){
-    .section-item, .section-item.two-column {
-      flex-direction: column !important;
+  /* Mobile */
+  @media (max-width: 768px) {
+    nav.main-nav {
+      display: none;
     }
-    .section-item .image,
+    
+    .section-item {
+      flex-direction: column;
+    }
+    
+    .section-item .image {
+      flex: 1;
+    }
+    
     .section-item .content {
-      flex: 1 1 100% !important;
+      flex: 1;
     }
-    .utilities-grid {
+    
+    .banner-text h1 {
+      font-size: 28px;
+    }
+    
+    .zones-grid, .utilities-grid {
       grid-template-columns: 1fr;
     }
   }
@@ -257,100 +622,27 @@
 </head>
 <body>
 
-<div style="display:none;">
-  <h1>Vinhomes Paradise Cần Giờ – Khu đô thị biển sinh thái chuẩn ESG++ của Vingroup</h1>
-  <p><strong>Vinhomes Paradise Cần Giờ</strong> là dự án đô thị biển sinh thái quy mô hơn 2.870 ha do <strong>Tập đoàn Vingroup</strong> phát triển, hướng đến mô hình <strong>ESG++</strong> – phát triển bền vững kết hợp công nghệ, môi trường, và cộng đồng. Đây là khu đô thị tiên phong áp dụng tiêu chuẩn <em>Environment – Social – Governance</em> mở rộng, tạo nên một thành phố biển xanh, thông minh và nhân văn tại cửa ngõ phía Nam TP.HCM.</p>
-
-  <p>Khu thấp tầng của dự án bao gồm các dòng sản phẩm cao cấp: 
-  <strong>Biệt thự đơn lập</strong> hướng hồ sinh thái, không gian riêng tư; 
-  <strong>Biệt thự song lập</strong> cân bằng giữa nghỉ dưỡng và gắn kết cộng đồng; 
-  <strong>Nhà liền kề</strong> hiện đại, phù hợp gia đình trẻ; 
-  <strong>Shophouse thương mại</strong> nằm trên trục phố trung tâm sầm uất – nơi hội tụ đầu tư và kinh doanh tiềm năng.</p>
-
-  <p>Dự án tích hợp chuỗi tiện ích 5 sao: <strong>Vinmec</strong>, <strong>Vinschool</strong>, <strong>bến du thuyền quốc tế</strong>, <strong>công viên biển</strong>, <strong>trung tâm thương mại Vincom</strong>, <strong>khu thể thao ven hồ</strong> và hệ thống <strong>Smart City</strong> quản lý bằng công nghệ AI & IoT. Nhờ kết nối thuận tiện qua <strong>cầu Cần Giờ</strong> và <strong>cao tốc Bến Lức – Long Thành</strong>, nơi đây hứa hẹn trở thành biểu tượng của đô thị biển hiện đại, xanh và đáng sống bậc nhất Việt Nam.</p>
-
-  <p>Vinhomes Paradise Cần Giờ là minh chứng cho tầm nhìn ESG++ của Vingroup: phát triển bền vững, bảo tồn sinh thái, nâng tầm chất lượng sống, và kiến tạo cộng đồng văn minh – thông minh – nhân ái.</p>
-
-  <p><strong>ESG++</strong> bao gồm ba trụ cột chính <em>Environment – Social – Governance</em> và mở rộng với yếu tố <em>Smart & Sustainable</em>:</p>
-  <ul>
-    <li><strong>Environment (Môi trường):</strong> Quy hoạch mật độ xây dựng thấp, không gian xanh chiếm hơn 70% diện tích, sử dụng năng lượng tái tạo và vật liệu thân thiện môi trường.</li>
-    <li><strong>Social (Xã hội):</strong> Xây dựng cộng đồng văn minh, gắn kết; tích hợp trường <em>Vinschool</em>, bệnh viện <em>Vinmec</em>, khu thể thao, công viên ven biển và không gian sinh hoạt cộng đồng.</li>
-    <li><strong>Governance (Quản trị):</strong> Vận hành minh bạch, tuân thủ quy chuẩn phát triển bền vững, hướng đến lợi ích lâu dài của cư dân và nhà đầu tư.</li>
-    <li><strong>Smart & Sustainable (Thông minh & Bền vững):</strong> Ứng dụng AI, IoT, và hệ thống quản lý thông minh trong hạ tầng, giao thông, an ninh và tiết kiệm năng lượng.</li>
-  </ul>
-
-  <h2>Bất động sản Vinhomes Paradise Cần Giờ – Biểu tượng đô thị biển mới của TP.HCM</h2>
-
-  <p><strong>Vinhomes Paradise Cần Giờ</strong> là dự án căn hộ cao cấp thuộc đại đô thị biển Vinhomes Cần Giờ, do tập đoàn Vingroup phát triển. Dự án nằm tại vị trí chiến lược ngay cửa ngõ phía Nam TP.HCM, kết nối trung tâm thành phố qua <strong>cầu Cần Giờ</strong> – công trình hạ tầng trọng điểm dự kiến hoàn thành trước năm 2030. Đây được xem là biểu tượng mới của xu hướng <em>đô thị nghỉ dưỡng sinh thái ven biển</em>.</p>
-  
-  <h3>1. Căn hộ Vinhomes Paradise Cần Giờ – Chuẩn sống nghỉ dưỡng giữa lòng đô thị</h3>
-  <p>Các căn hộ Vinhomes Paradise được thiết kế theo phong cách <strong>resort living</strong> với tầm nhìn hướng biển, không gian mở, tiện ích đồng bộ chuẩn 5 sao: bến du thuyền, hồ cảnh quan, trung tâm thương mại Vincom, trường học Vinschool và bệnh viện Vinmec. Đây là lựa chọn lý tưởng cho cư dân yêu thích phong cách sống xanh, sang trọng và tiện nghi.</p>
-
-  <h3>2. Đất nền Cần Giờ – Tiềm năng sinh lời vượt trội</h3>
-  <p>Thị trường <strong>đất nền Cần Giờ</strong> đang thu hút giới đầu tư nhờ hạ tầng phát triển mạnh và quy hoạch đồng bộ. Dự án cầu Cần Giờ và cảng trung chuyển quốc tế Cần Giờ sẽ giúp khu vực này trở thành tâm điểm logistics – du lịch – đô thị biển của TP.HCM. Giá đất tại Cần Giờ vẫn còn thấp hơn nhiều so với Nhà Bè, Thủ Đức hay Quận 9, tạo dư địa tăng trưởng dài hạn hấp dẫn.</p>
-
-  <h3>3. Cảng trung chuyển quốc tế Cần Giờ – Bước nhảy vọt hạ tầng Việt Nam</h3>
-  <p><strong>Cảng Cần Giờ</strong> là dự án chiến lược được quy hoạch trở thành cảng trung chuyển quốc tế lớn nhất Việt Nam, hướng đến quy mô tương đương <strong>Cảng Singapore</strong> trong tương lai. Với công suất dự kiến hơn 10 triệu TEU/năm, cảng này sẽ giúp Việt Nam giảm phụ thuộc vào trung chuyển nước ngoài, thu hút hàng trăm doanh nghiệp logistics toàn cầu và thúc đẩy kinh tế khu vực Nam Bộ phát triển bền vững.</p>
-
-  <h3>4. Lễ hội Nghinh Ông Cần Giờ – Bản sắc văn hóa vùng biển</h3>
-  <p><strong>Hội Nghinh Ông Cần Giờ</strong> là lễ hội truyền thống lớn nhất miền biển Nam Bộ, được công nhận là di sản văn hóa phi vật thể quốc gia. Lễ hội thể hiện tín ngưỡng của ngư dân vùng biển, tôn vinh cá Ông – vị thần bảo hộ của nghề biển. Sự kiện thường diễn ra vào tháng 8 âm lịch, thu hút hàng chục nghìn du khách, góp phần thúc đẩy du lịch và giá trị văn hóa khu vực.</p>
-
-  <h3>5. Tầm nhìn phát triển – Cần Giờ hướng đến “Singapore của Việt Nam”</h3>
-  <p>Với sự kết hợp giữa đô thị sinh thái, cảng trung chuyển quốc tế, khu nghỉ dưỡng biển và hệ thống giao thông hiện đại, Cần Giờ đang được định hướng trở thành “<strong>thành phố biển sinh thái – du lịch – thương mại đẳng cấp quốc tế</strong>”. Các dự án trọng điểm như <em>Vinhomes Paradise Cần Giờ</em> hứa hẹn sẽ là hạt nhân thúc đẩy sự chuyển mình toàn diện của khu vực này.</p>
-
-  <h3>6. Từ khóa SEO gợi ý</h3>
-  <ul>
-    <li>căn hộ vinhomes paradise cần giờ</li>
-    <li>vinhomes cần giờ</li>
-    <li>đất nền cần giờ</li>
-    <li>cảng trung chuyển cần giờ</li>
-    <li>hội nghinh ông cần giờ</li>
-    <li>dự án vinhomes paradise cần giờ</li>
-    <li>đầu tư cần giờ 2025</li>
-    <li>vinhomes cần giờ giá bao nhiêu</li>
-    <li>khu đô thị biển cần giờ</li>
-  </ul>
-
-  <p><em>*Nguồn tổng hợp: Vingroup, UBND TP.HCM, Quy hoạch cảng biển quốc gia và tư liệu văn hóa Cần Giờ 2025.</em></p>
-</div>
 <header>
-  <div class="logo">
-    <img src="Logo-Vinhomes.webp" alt="Logo Vinhomes" />
-  </div>
-
-  <input type="checkbox" id="menu-toggle" />
-  <label for="menu-toggle" class="hamburger9776label"></label>
-
-  <div class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
+  <div class="logo">HIẾU BÙI BDS</div>
   <nav class="main-nav">
     <a href="#overview">Tổng quan</a>
-    <a href="#location">Vị trí</a>
-    <a href="#details">Quy mô</a>
+    <a href="#services">Dịch vụ</a>
+    <a href="#projects">Dự án</a>
     <a href="#amenities">Tiện ích</a>
-    <a href="#policies">Chính sách</a>
     <a href="#contact">Liên hệ</a>
   </nav>
-
 </header>
 
 <div class="banner">
-  <img id="slideshowBanner" src="" alt="Banner dự án">
-
-  <div class="banner-text">
-    <h1>VINHOMES PARADISE CẦN GIỜ</h1>
-    <p>Khu đô thị biển đẳng cấp quốc tế</p>
-  </div>
-
+  <img id="slideshowBanner" src="avata.jpg" alt="Banner">
   <button class="prev" onclick="changeBanner(-1)">❮</button>
   <button class="next" onclick="changeBanner(1)">❯</button>
-
+  <div class="banner-text">
+    <h1>HIẾU BÙI BDS 24H</h1>
+    <p>Chuyên viên tư vấn bất động sản hàng đầu</p>
+  </div>
   <div class="dots">
-    <span class="dot" onclick="showBanner(0)"></span>
+    <span class="dot active" onclick="showBanner(0)"></span>
     <span class="dot" onclick="showBanner(1)"></span>
     <span class="dot" onclick="showBanner(2)"></span>
   </div>
@@ -358,350 +650,197 @@
 
 <section id="overview">
   <h2>Tổng quan</h2>
-  <div class="section-item two-column left" onclick="toggleSection(this)">
+  <div class="section-item" onclick="toggleSection(this)">
     <div class="image">
-      <img src="tongquan.jpg" alt="Tổng quan dự án">
+      <img src="tongquan.jpg" alt="Tổng quan">
     </div>
-
     <div class="content">
       <div class="section-info">
-        <h3>Tổng quan dự án</h3>
-        <p>Khu đô thị biển sinh thái đẳng cấp quốc tế với nhiều phân khu đa dạng.</p>
+        <h3>Về Hiếu Bùi BDS 24h</h3>
+        <p>Chuyên viên tư vấn bất động sản chuyên nghiệp, uy tín, tận tâm.</p>
       </div>
-
-      <div class="section-content" style="display:none;">
-        <p><strong>Vinhomes Paradise Cần Giờ</strong> là khu đô thị biển sinh thái đẳng cấp quốc tế, quy hoạch tỷ lệ 1/500 với tổng diện tích khoảng <b>2.870 ha</b>. Dự án do Tập đoàn Vingroup phát triển, hướng tới trở thành “thành phố biển” hiện đại, kết hợp nghỉ dưỡng, thương mại và dịch vụ cao cấp.</p>
-
-        <h4>Phân khu A: Biệt thự biển</h4>
-        <p>Các biệt thự ven biển view trực diện ra biển, thiết kế hiện đại, tích hợp cảnh quan xanh mát, phù hợp khách hàng cao cấp.</p>
-
-        <h4>Phân khu B: Căn hộ cao tầng</h4>
-        <p>Tòa căn hộ cao tầng gần trung tâm dịch vụ, thiết kế thông minh, tiện nghi, kết nối nhanh đến các tiện ích nội khu và giao thông chính.</p>
-
-        <h4>Phân khu C: Shophouse & Thương mại</h4>
-        <p>Các shophouse và trung tâm thương mại dọc trục đường chính, phục vụ mua sắm, ẩm thực, giải trí. Tạo không gian sống năng động kết hợp thương mại.</p>
-
-        <h4>Phân khu D: Tiện ích & Nghỉ dưỡng</h4>
-        <p>Bến du thuyền quốc tế, công viên biển, resort cao cấp, trường học và bệnh viện quốc tế. Tạo môi trường sống chất lượng, an toàn, phù hợp cư dân và du khách.</p>
-
-        <h4>Phân khu E: Hạ tầng & Kết nối</h4>
+      <div class="section-content">
+        <p><strong>Hiếu Bùi BDS 24h</strong> là chuyên viên tư vấn bất động sản có kinh nghiệm sâu, chuyên tư vấn mua, bán, cho thuê, chuyển nhượng các dự án cao cấp của Vinhomes, Masterise, MIK Group, Sun Group tại TP.HCM và các khu vực lân cận.</p>
+        <h4>Lĩnh vực tư vấn:</h4>
         <ul>
-          <li><b>Vị trí:</b> Huyện Cần Giờ, TP.HCM – cửa ngõ chiến lược ra biển Đông.</li>
-          <li><b>Giao thông:</b> Cao tốc Bến Lức – Long Thành, cầu Cần Giờ, kết nối trung tâm TP.HCM 50 phút.</li>
-          <li><b>Môi trường:</b> Khu rừng ngập mặn UNESCO, biển, và cảnh quan sinh thái hài hòa.</li>
+          <li>🏢 <strong>Biệt thự</strong> - Nhà phố - Căn hộ cao cấp</li>
+          <li>🛍️ <strong>Shophouse</strong> - Dự án thương mại</li>
+          <li>💰 <strong>Đầu tư bất động sản</strong> - Tư vấn chiến lược lợi nhuận</li>
+          <li>🔑 <strong>Cho thuê lâu dài</strong> - Quản lý tài sản</li>
+          <li>📍 <strong>Chuyển nhượng nhanh</strong> - Hỗ trợ pháp lý toàn diện</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section id="details"><h2>Quy mô</h2>
-  <div class="section-item two-column right" onclick="toggleSection(this)">
-    
-    <div class="content">
-      <div class="section-info">
-        <p>Vị trí chiến lược, xu hướng tăng trưởng dài hạn.</p>
-      </div>
-
-      <div class="section-content" style="display:none;">
-        <p><strong>Vinhomes Paradise Cần Giờ</strong> sở hữu vị trí chiến lược ven biển TP.HCM, được mệnh danh là “lá phổi xanh” của thành phố.</p>
-        <ul>
-          <li><b>Vị trí vàng:</b> cửa ngõ biển Đông, kết nối nhanh về trung tâm TP.HCM.</li>
-          <li><b>Hạ tầng đồng bộ:</b> đường Rừng Sác, cao tốc Bến Lức – Long Thành.</li>
-          <li><b>Du lịch:</b> gần khu dự trữ sinh quyển Cần Giờ được UNESCO công nhận.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="image">
-      <img src="tiemnang.jpg" alt="Tiềm năng phát triển">
-    </div>
-  </div>
-</section>
-
-<section id="location">
-  <h2>Vị trí</h2>
-  <div class="section-item left" onclick="toggleSection(this)">
-    <div class="image">
-      <img src="vitri.jpg" alt="Vị trí dự án">
-    </div>
-
-    <div class="content">
-      <div class="section-info">
-        <p>Cửa ngõ biển duy nhất của TP.HCM...</p>
-      </div>
-
-      <div class="section-content" style="display:none;">
-        <p><strong>Vinhomes Paradise Cần Giờ</strong> tọa lạc tại huyện Cần Giờ – cửa ngõ biển duy nhất của TP.HCM.</p>
-        <ul>
-          <li>Kết nối trung tâm TP.HCM chỉ 50 phút di chuyển.</li>
-          <li>Gần khu dự trữ sinh quyển rừng ngập mặn – UNESCO công nhận.</li>
-          <li>Hạ tầng lớn: cầu Cần Giờ, cao tốc Bến Lức – Long Thành.</li>
-        </ul>
-        <button class="map-btn" onclick="event.stopPropagation(); document.getElementById('mapPopup').style.display='flex';">
-          📍 XEM BẢN ĐỒ
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div id="mapPopup">
-  <div class="map-content">
-    <span onclick="document.getElementById('mapPopup').style.display='none'" 
-          style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:20px;">✖</span>
-    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=15KNN0BdxN2UMEuiJwEOdkl3CS_ChY9U&ehbc=2E312F" width="100%" height="480" frameborder="0"></iframe>
-  </div>
-</div>
-
-<section id="zones" class="container project-details">
-  <h2>Các phân khu chức năng</h2>
-  <div class="zones-grid">
-    <div class="zone-item" onclick="toggleZone(this)">
-      <img src="khu-a.jpg" alt="Phân khu A">
-      <div class="zone-info">
-        <h3>Phân khu A – 953 ha</h3>
-        <p>Cửa ngõ sinh thái kết hợp dịch vụ du lịch.</p>
-      </div>
-      <div class="zone-content">
-        <p>Phân khu A là cửa ngõ của toàn dự án, gắn kết giữa thiên nhiên và nhịp sống đô thị.</p>
-        <ul>
-          <li>Khu ở sinh thái kết hợp dịch vụ du lịch ven sông & biển.</li>
-          <li>Gồm 4 đơn vị ở và 4 khu chức năng.</li>
-          <li>Công viên chuyên đề, sân golf, trung tâm văn hóa – hội nghị.</li>
-          <li><strong>An cư lâu dài kết hợp nghỉ dưỡng cao cấp</strong>.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="zone-item" onclick="toggleZone(this)">
-      <img src="khu-b.jpg" alt="Phân khu B">
-      <div class="zone-info">
-        <h3>Phân khu B – 660 ha</h3>
-        <p>Trái tim dịch vụ – thương mại – giáo dục – y tế.</p>
-      </div>
-      <div class="zone-content">
-        <p>Phân khu B là trung tâm nhộn nhịp của toàn khu đô thị.</p>
-        <ul>
-          <li>Đô thị thông minh với hạ tầng xã hội đầy đủ.</li>
-          <li>Khu du lịch nghỉ dưỡng, bệnh viện, trường học, trung tâm hành chính.</li>
-          <li>Thương mại dịch vụ, văn phòng, khu cây xanh đô thị.</li>
-          <li><strong>Nhịp sống sầm uất, năng động</strong>.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="zone-item" onclick="toggleZone(this)">
-      <img src="khu-c.jpg" alt="Phân khu C">
-      <div class="zone-info">
-        <h3>Phân khu C – 318 ha</h3>
-        <p>Trung tâm tài chính – thương mại, biểu tượng dự án.</p>
-      </div>
-      <div class="zone-content">
-        <p>Phân khu C định hướng thành CBD của dự án.</p>
-        <ul>
-          <li>Trung tâm tài chính, thương mại, hội nghị, bến cảng du lịch.</li>
-          <li>Nhà ở cao tầng, shophouse, biệt thự cao cấp.</li>
-          <li><strong>Điểm nhấn kiến trúc biểu tượng</strong>.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="zone-item" onclick="toggleZone(this)">
-      <img src="khu-d.jpg" alt="Phân khu D">
-      <div class="zone-info">
-        <h3>Phân khu D – 480 ha</h3>
-        <p>Khu nghỉ dưỡng – thương mại cao cấp.</p>
-      </div>
-      <div class="zone-content">
-        <p>Phân khu D là thiên đường nghỉ dưỡng và không gian sống đẳng cấp.</p>
-        <ul>
-          <li>Biệt thự biển, resort quốc tế, khách sạn 5 sao.</li>
-          <li>Trung tâm thương mại, dịch vụ giải trí.</li>
-          <li><strong>Không gian nghỉ dưỡng hạng sang</strong>.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="zone-item" onclick="toggleZone(this)">
-      <img src="khu-e.jpg" alt="Phân khu E">
-      <div class="zone-info">
-        <h3>Phân khu E – 458 ha</h3>
-        <p>Lá phổi xanh và không gian mặt nước.</p>
-      </div>
-      <div class="zone-content">
-        <p>Phân khu E đóng vai trò là mảng xanh & mặt nước của toàn dự án.</p>
-        <ul>
-          <li>Công viên, hồ cảnh quan, kênh rạch, bãi cát ven biển.</li>
-          <li>Sân golf quy mô, công viên chuyên đề, khu vui chơi ngoài trời.</li>
-          <li><strong>Lá phổi xanh điều hòa khí hậu</strong>.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="amenities" class="container">
-  <h2>Tiện ích</h2>
+<section id="services">
+  <h2>Dịch vụ tư vấn</h2>
   <div class="utilities-grid">
     <div class="utility-item" onclick="toggleUtility(this)">
-      <img src="duthuyen.webp" alt="Bến du thuyền quốc tế">
+      <img src="mua-ban.jpg" alt="">
       <div class="utility-text">
-        <h3>Bến du thuyền quốc tế</h3>
-        <p class="short">Biểu tượng sống thượng lưu ven biển.</p>
-        <p class="detail">
-          🌊 <b>Ý nghĩa:</b> Bến du thuyền quy mô quốc tế, nơi đón các siêu du thuyền sang trọng, 
-          trở thành biểu tượng của lối sống đẳng cấp tại Vinhomes Paradise Cần Giờ.<br><br>
-          ⚓ <b>Trải nghiệm:</b> Cư dân tận hưởng không gian giải trí bên bờ biển, tổ chức sự kiện, 
-          tham gia các tour du lịch biển ngay tại nhà.<br><br>
-          💎 <b>Giá trị đầu tư:</b> Tiện ích hiếm có tại TP.HCM, giúp dự án trở thành điểm đến 
-          cho giới thượng lưu, gia tăng giá trị bất động sản lâu dài.
-        </p>
+        <h3>Mua & Bán</h3>
+        <p class="short">Tìm kiếm, định giá, đàm phán tốt nhất.</p>
+        <p class="detail">Tư vấn lựa chọn bất động sản đúng nhu cầu, giá cả hợp lý, hỗ trợ đàm phán với chủ nhân để đạt mục tiêu tốt nhất.</p>
       </div>
     </div>
 
     <div class="utility-item" onclick="toggleUtility(this)">
-      <img src="vinschool.jpg" alt="Hệ thống giáo dục Vinschool">
+      <img src="cho-thue.jpg" alt="">
       <div class="utility-text">
-        <h3>Trường học Vinschool</h3>
-        <p class="short">Hệ thống giáo dục toàn diện ngay trong dự án.</p>
-        <p class="detail">
-          🎓 <b>Ý nghĩa:</b> Giáo dục luôn là nền tảng quan trọng cho gia đình và tương lai con trẻ.<br><br>
-          📘 <b>Trải nghiệm:</b> Con em được học tập trong môi trường liên cấp chuẩn quốc tế, 
-          tích hợp cả chương trình Cambridge, phát triển tư duy và kỹ năng mềm toàn diện.<br><br>
-          📈 <b>Giá trị đầu tư:</b> Trường học nội khu giúp thu hút nhiều gia đình trẻ, 
-          tạo nhu cầu an cư bền vững và nâng cao tiềm năng cho thuê lại bất động sản.
-        </p>
+        <h3>Cho Thuê</h3>
+        <p class="short">Tối ưu hóa lợi nhuận cho thuê.</p>
+        <p class="detail">Tìm khách hàng, ký hợp đồng, thu tiền, quản lý bất động sản cho thuê hiệu quả và an toàn pháp lý.</p>
       </div>
     </div>
 
     <div class="utility-item" onclick="toggleUtility(this)">
-      <img src="congvien.webp" alt="Công viên biển & Quảng trường">
+      <img src="chuyen-nhuong.jpg" alt="">
       <div class="utility-text">
-        <h3>Công viên biển & Quảng trường</h3>
-        <p class="short">Không gian xanh mát, cộng đồng sôi động.</p>
-        <p class="detail">
-          🌴 <b>Ý nghĩa:</b> Cân bằng thiên nhiên và đời sống cộng đồng, nâng cao sức khỏe tinh thần.<br><br>
-          🎶 <b>Trải nghiệm:</b> Tổ chức các lễ hội biển, âm nhạc, thể thao cộng đồng ngay trong quảng trường ven biển. 
-          Nơi lý tưởng để cư dân thư giãn, giao lưu và gắn kết.<br><br>
-          🏡 <b>Giá trị đầu tư:</b> Không gian sinh thái rộng lớn hiếm có tại TP.HCM, 
-          gia tăng sức hút và giá trị bất động sản nghỉ dưỡng.
-        </p>
+        <h3>Chuyển Nhượng</h3>
+        <p class="short">Thủ tục pháp lý nhanh chóng, an toàn.</p>
+        <p class="detail">Hỗ trợ thủ tục sang tên, đăng ký bộ, giải quyết vấn đề pháp lý, chuyển nhượng nhanh gọn.</p>
       </div>
     </div>
 
     <div class="utility-item" onclick="toggleUtility(this)">
-      <img src="tttm.jpg" alt="Trung tâm thương mại">
+      <img src="vay-ngan-hang.jpg" alt="">
       <div class="utility-text">
-        <h3>Trung tâm thương mại</h3>
-        <p class="short">Tổ hợp mua sắm – giải trí – ẩm thực.</p>
-        <p class="detail">
-          🛍️ <b>Ý nghĩa:</b> Mang cả thế giới tiện ích đến ngay ngưỡng cửa, giúp cư dân không cần di chuyển xa.<br><br>
-          🍿 <b>Trải nghiệm:</b> Hệ thống siêu thị, cửa hàng, rạp chiếu phim, khu ẩm thực phong phú 
-          phục vụ nhu cầu giải trí – mua sắm trọn vẹn.<br><br>
-          💰 <b>Giá trị đầu tư:</b> Làm gia tăng sức hút thương mại cho dự án, 
-          tạo thêm dòng tiền ổn định từ kinh doanh shophouse, mặt bằng bán lẻ.
-        </p>
+        <h3>Hỗ Trợ Vay</h3>
+        <p class="short">Kết nối ngân hàng, lãi suất tối ưu.</p>
+        <p class="detail">Hỗ trợ hồ sơ vay vốn, tư vấn lãi suất, hạn mức, điều kiện vay ưu đãi từ các ngân hàng hàng đầu.</p>
       </div>
     </div>
 
     <div class="utility-item" onclick="toggleUtility(this)">
-      <img src="benhvien.jpg" alt="Bệnh viện Vinmec">
+      <img src="dau-tu.jpg" alt="">
       <div class="utility-text">
-        <h3>Bệnh viện Vinmec</h3>
-        <p class="short">Chăm sóc sức khỏe chuẩn quốc tế.</p>
-        <p class="detail">
-          🏥 <b>Ý nghĩa:</b> Sức khỏe cư dân được đảm bảo ngay trong nội khu, 
-          một yếu tố hiếm có tại các dự án ven biển.<br><br>
-          👨‍⚕️ <b>Trải nghiệm:</b> Dịch vụ y tế cao cấp, đội ngũ bác sĩ chuyên môn sâu, 
-          công nghệ chẩn đoán và điều trị hiện đại.<br><br>
-          📊 <b>Giá trị đầu tư:</b> Yếu tố đảm bảo chất lượng sống dài hạn, 
-          gia tăng sự tin cậy của khách hàng và nhà đầu tư.
-        </p>
+        <h3>Tư Vấn Đầu Tư</h3>
+        <p class="short">Chiến lược đầu tư sinh lời lâu dài.</p>
+        <p class="detail">Phân tích tiềm năng dự án, lên kế hoạch đầu tư toàn diện, cam kết giá trị gia tăng bền vững.</p>
       </div>
     </div>
 
     <div class="utility-item" onclick="toggleUtility(this)">
-      <img src="thethao.jpg" alt="Hồ cảnh quan & Khu thể thao">
+      <img src="24h.jpg" alt="">
       <div class="utility-text">
-        <h3>Hồ cảnh quan & Khu thể thao</h3>
-        <p class="short">Sống năng động, cân bằng và khỏe mạnh.</p>
-        <p class="detail">
-          🏞️ <b>Ý nghĩa:</b> Mang thiên nhiên và thể thao hòa quyện trong đời sống cư dân.<br><br>
-          ⚽ <b>Trải nghiệm:</b> Hồ cảnh quan, đường dạo bộ, sân tennis, bể bơi, gym, yoga ngoài trời – 
-          tất cả đều có sẵn để rèn luyện và thư giãn.<br><br>
-          🚀 <b>Giá trị đầu tư:</b> Xu hướng bất động sản gắn với thể thao & sức khỏe 
-          ngày càng được ưa chuộng, nâng giá trị bền vững.
-        </p>
+        <h3>Dịch Vụ 24H</h3>
+        <p class="short">Luôn sẵn sàng, hỗ trợ bất kỳ lúc.</p>
+        <p class="detail">Tư vấn 24/7, trả lời mọi câu hỏi, xử lý mọi vấn đề nhanh chóng và chuyên nghiệp.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="policies" class="container sales-policy">
-  <h2>Chính sách</h2>
+<section id="projects">
+  <h2>Dự án Vinhomes nổi bật</h2>
+  <div class="zones-grid">
+    <div class="zone-item" onclick="toggleZone(this)">
+      <img src="ocean-park.jpg" alt="">
+      <div class="zone-info">
+        <h3>Vinhomes Ocean Park 2 & 3</h3>
+        <p>📍 Gia Lâm, Hưng Yên</p>
+      </div>
+      <div class="zone-content">
+        <p><strong>Siêu quần thể đô thị biển 1.200 ha</strong> - Lớn nhất Việt Nam. Sản phẩm: Biệt thự, căn hộ, shophouse ven biển. Tiện ích: Royal Wave Park, Paradise Bay, Marina quốc tế. Tăng giá mạnh, sinh lời cao.</p>
+      </div>
+    </div>
+
+    <div class="zone-item" onclick="toggleZone(this)">
+      <img src="ha-long.jpg" alt="">
+      <div class="zone-info">
+        <h3>Vinhomes Hạ Long Xanh</h3>
+        <p>📍 Hạ Long, Quảng Ninh</p>
+      </div>
+      <div class="zone-content">
+        <p><strong>Kỳ quan đô thị thế kỷ 21</strong> bên vịnh UNESCO. Loại hình: Căn hộ cao cấp, biệt thự, trung tâm thương mại. Tiềm năng tăng giá cao, sinh lời từ cho thuê du lịch.</p>
+      </div>
+    </div>
+
+    <div class="zone-item" onclick="toggleZone(this)">
+      <img src="hai-van.jpg" alt="">
+      <div class="zone-info">
+        <h3>Vinhomes Hải Vân Bay</h3>
+        <p>📍 Liên Chiểu, Đà Nẵng</p>
+      </div>
+      <div class="zone-content">
+        <p><strong>Tuyệt tác nghỉ dưỡng sơn hướng thủy</strong> trên cung đường biển đẹp nhất miền Trung. Shophouse ven biển, biệt thự view biển. Lợi suất cho thuê resort cao.</p>
+      </div>
+    </div>
+
+    <div class="zone-item" onclick="toggleZone(this)">
+      <img src="can-gio.jpg" alt="">
+      <div class="zone-info">
+        <h3>Vinhomes Cần Giờ</h3>
+        <p>📍 Cần Giờ, TP.HCM</p>
+      </div>
+      <div class="zone-content">
+        <p><strong>Siêu dự án lấn biển 2.870 ha</strong>. Biểu tượng sinh thái tương lai. Rừng ngập mặn, công viên sinh thái tự nhiên. Định hướng trở thành "thành phố biển" mới.</p>
+      </div>
+    </div>
+
+    <div class="zone-item" onclick="toggleZone(this)">
+      <img src="sai-gon-park.jpg" alt="">
+      <div class="zone-info">
+        <h3>Vinhomes Sài Gòn Park</h3>
+        <p>📍 Hóc Môn, TP.HCM</p>
+      </div>
+      <div class="zone-content">
+        <p><strong>Không gian xanh cao cấp</strong> tâm điểm phát triển Hóc Môn. Căn hộ thông minh, penthouse, nhà phố cao cấp. Tăng giá từ hạ tầng phát triển nhanh.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="amenities">
+  <h2>Chính sách & Ưu đãi</h2>
   <div class="policy-grid">
     <div class="policy-item">
-      <h3>Ưu đãi giai đoạn 1</h3>
-      <p>Khách hàng đặt mua trong giai đoạn đầu sẽ nhận nhiều ưu đãi đặc biệt: chiết khấu hấp dẫn, quà tặng giá trị.</p>
+      <h3>Tư vấn miễn phí</h3>
+      <p>Tư vấn miễn phí 100% cho tất cả khách hàng về dự án, thị trường, chiến lược đầu tư.</p>
+      <a href="#" class="policy-btn">Liên hệ ngay</a>
+    </div>
+
+    <div class="policy-item">
+      <h3>Hỗ trợ pháp lý</h3>
+      <p>Hỗ trợ toàn bộ thủ tục pháp lý từ A đến Z, đảm bảo an toàn tuyệt đối cho khách hàng.</p>
       <a href="#" class="policy-btn">Xem chi tiết</a>
     </div>
 
     <div class="policy-item">
-      <h3>Chính sách thanh toán</h3>
-      <p>Thanh toán linh hoạt theo tiến độ xây dựng. Hỗ trợ vay vốn ngân hàng với lãi suất ưu đãi.</p>
-      <a href="#" class="policy-btn">Xem chi tiết</a>
-    </div>
-
-    <div class="policy-item">
-      <h3>Hỗ trợ đầu tư</h3>
-      <p>Khách hàng đầu tư dài hạn sẽ được tư vấn chiến lược, cam kết giá trị gia tăng bền vững.</p>
+      <h3>Chuyên nhượng nhanh</h3>
+      <p>Chuyên nhượng nhanh gọn, an toàn, xử lý mọi vấn đề pháp lý phức tạp.</p>
       <a href="#" class="policy-btn">Liên hệ tư vấn</a>
     </div>
   </div>
 </section>
 
 <section id="contact">
-  <h2>Liên hệ</h2>
+  <h2>Liên Hệ Tư Vấn</h2>
 
-  <button id="registerBtn" style="cursor:pointer; padding:10px 20px; font-size:16px; font-weight:bold; text-transform:uppercase; color:red; animation: blink 1s infinite;">
-    📩 Đăng ký nhận thông tin dự án
+  <button id="registerBtn" style="animation: blink 1s infinite;">
+    📩 Đăng Ký Nhận Tư Vấn
   </button>
 
-  <div id="formBox" style="display:none; margin-top:15px;">
-    <iframe 
-      src="https://forms.gle/FXoXueQHQRoP1WVi9" 
-      width="100%" 
-      height="800" 
-      frameborder="0" 
-      marginheight="0" 
-      marginwidth="0">
-      Đang tải…
-    </iframe>
-  </div>
-
-  <div style="margin-top: 30px; max-width: 600px; margin-left: auto; margin-right: auto; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
-    <table width="100%" cellspacing="0" cellpadding="0">
+  <div class="contact-card">
+    <table>
       <tr>
-        <td width="100" valign="top">
-          <img src="https://github.com/Hieubv3/Green-paradise-cangio/raw/main/Avata.jpg" 
-                alt="Hiếu Bùi Avatar" 
-                style="width:80px; height:80px; border-radius:50%; border:2px solid #0077b6; object-fit:cover; display:block;">
+        <td width="100" valign="top" style="padding-right: 15px;">
+          <img src="avata.jpg" alt="Avatar">
         </td>
-        
-        <td valign="middle" style="text-align:left; padding-left:15px;">
-          <p style="margin:0; font-size:18px; font-weight:bold; color:#0077b6;">
-            Vinhomes Paradise Cần Giờ
+        <td valign="middle">
+          <p style="font-size: 18px; font-weight: 800; color: #0d3a1f; margin-bottom: 3px;">
+            HIẾU BÙI BDS 24H
           </p>
-          <p style="margin:0; font-size:15px; color:#333; font-style:italic;">
-              MR. HIẾU – TP KINH DOANH
+          <p style="font-size: 14px; color: #666; font-style: italic; margin-bottom: 10px;">
+            Chuyên viên tư vấn bất động sản
           </p>
-          <p style="margin:8px 0 0; font-size:15px; color:#333;">
-            📞 <a href="tel:0962 299 939" style="color:rgb(0, 85, 255); text-decoration:none; font-weight:bold;">0962 299 939</a> – 
-            <a href="tel:0868 499 929" style="color:#d62828; text-decoration:none; font-weight:bold;">0868 499 929</a>
+          <p style="margin: 8px 0;">
+            📞 <a href="tel:0962299939" style="color: #22c55e; font-weight: 700;">0962 299 939</a>
           </p>
-          <p style="margin:5px 0; font-size:15px; color:#333;">
-            ✉️ <a href="mailto:hieubv3@gmail.com" style="color:#0077b6; text-decoration:none;">hieubv3@gmail.com</a>
+          <p style="margin: 5px 0;">
+            💬 <a href="https://zalo.me/0962299939" target="_blank" style="color: #0068ff; font-weight: 700;">Chat Zalo</a>
           </p>
         </td>
       </tr>
@@ -710,190 +849,112 @@
 </section>
 
 <div class="floating-buttons">
-  <a href="tel:0906 282 592" class="btn-call">
-    <img src="call.png" alt="Gọi điện">
-  </a>
-  <a href="https://zalo.me/0962299939" target="_blank" class="btn-zalo">
-    <img src="zalo.png" alt="Chat Zalo">
-  </a>
+  <a href="tel:0962299939" class="btn-call">📞</a>
+  <a href="https://zalo.me/0962299939" target="_blank" class="btn-zalo">💬</a>
 </div>
 
 <div class="floating-btn">
-  <a id="openPopup" href="#" style="text-decoration:none; color:inherit;">
-    <img src="pdf.png" alt="PDF">
-    <span>NHẬN BẢNG GIÁ</span>
-  </a>
+  <a id="openPopup" href="#">📋 BẢNG GIÁ</a>
 </div>
 
-<div id="popupBox" class="popup-box">
-  <span id="closePopup" class="close-btn">×</span>
-  <h2>Đăng ký nhận tài liệu</h2>
+<div id="popupBox">
+  <span class="close-btn" id="closePopup">×</span>
+  <h2>Đăng ký nhận bảng giá</h2>
   <form id="leadForm">
     <input type="text" name="name" placeholder="Họ và tên" required>
     <input type="email" name="email" placeholder="Email" required>
     <input type="tel" name="phone" placeholder="Số điện thoại" required>
     <button type="submit">Gửi</button>
   </form>
-  <div id="successMsg" class="success-msg">✅ Đăng ký thành công!</div>
+  <div id="successMsg" style="display: none; margin-top: 15px; color: #22c55e; font-weight: bold;">✅ Đăng ký thành công!</div>
 </div>
 
-<div id="formPopup" class="popup">
-  <div class="popup-content square">
-    <p id="popupMessage">⏳ Đang gửi...</p>
-    <button id="popupClose" onclick="closePopup()">Đóng</button>
-  </div>
-</div>
-
-<script src="menu.js"></script>
-
 <script>
-  const banners = ["banner1.jpg", "banner2.jpg", "banner3.jpg"];
-  let index = 0;
+const banners = ["avata.jpg", "banner1.jpg", "banner2.jpg"];
+let index = 0;
 
-  function showBanner(i) {
-    index = i;
-    document.getElementById("slideshowBanner").src = banners[index];
-
-    // Cập nhật chấm active
-    const dots = document.querySelectorAll(".dot");
-    dots.forEach(dot => dot.classList.remove("active"));
-    dots[index].classList.add("active");
-  }
-
-  function changeBanner(step) {
-    index = (index + step + banners.length) % banners.length;
-    showBanner(index);
-  }
-
-  // Khởi tạo khi load trang
-  document.addEventListener("DOMContentLoaded", () => {
-    showBanner(index);
+function showBanner(i) {
+  index = i;
+  document.getElementById("slideshowBanner").src = banners[index];
+  document.querySelectorAll(".dot").forEach((dot, i2) => {
+    dot.classList.toggle("active", i2 === index);
   });
-</script>
+}
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    // Scroll Menu
-    document.querySelectorAll('nav.main-nav a').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
+function changeBanner(step) {
+  index = (index + step + banners.length) % banners.length;
+  showBanner(index);
+}
 
-        const href = this.getAttribute('href');
-        if (!href || !href.startsWith('#')) return;
+document.addEventListener("DOMContentLoaded", () => {
+  showBanner(0);
 
-        const targetId = href.substring(1);
-        const targetElement = document.getElementById(targetId);
-
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: 'smooth' });
-        } else {
-          console.warn(`Không tìm thấy phần tử có id: ${targetId}`);
-        }
-
-        const menuToggle = document.getElementById('menu-toggle');
-        if (menuToggle) menuToggle.checked = false;
-      });
-    });
-
-    // Read More (Nếu có)
-    document.querySelectorAll(".read-more").forEach(btn => {
-      btn.addEventListener("click", function() {
-        const text = this.previousElementSibling;
-        text.classList.toggle("expanded");
-        this.textContent = text.classList.contains("expanded") 
-          ? "Thu gọn ▲" 
-          : "Xem thêm ▼";
-      });
-    });
-  });
-  
-  // Toggle Section (Tổng quan, Quy mô, Vị trí)
-  function toggleSection(el){
-    const content = el.querySelector('.section-content');
-    if(content) content.style.display = (content.style.display === 'none' || content.style.display === '') ? 'block' : 'none';
-  }
-</script>
-
-<script>
-  function toggleZone(el){
-    // Đóng tất cả trừ cái đang click
-    document.querySelectorAll('.zone-item').forEach(item=>{
-      if (item !== el) {
-        item.classList.remove('open');
-      }
-    });
-    el.classList.toggle('open');
-  }
-</script>
-
-<script>
-  function toggleUtility(el) {
-    // Đóng tất cả trừ cái đang click
-    document.querySelectorAll('.utility-item').forEach(item=>{
-      if (item !== el) {
-        item.classList.remove('active');
-      }
-    });
-    el.classList.toggle("active");
-  }
-</script>
-
-<script>
-  document.getElementById('registerBtn').addEventListener('click', function() {
-    const form = document.getElementById('formBox');
-    form.style.display = form.style.display === 'none' ? 'block' : 'none';
-  });
-</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const btn = document.getElementById("openPopup");
-    const popup = document.getElementById("popupBox");
-    const closeBtn = document.getElementById("closePopup");
-    const form = document.getElementById("leadForm");
-    const successMsg = document.getElementById("successMsg");
-    
-    // Mở popup khi click vào nút "NHẬN BẢNG GIÁ" (floating-btn)
-    if (btn) btn.onclick = function(e) {
-      e.preventDefault(); 
-      popup.style.display = "block";
-    };
-
-    // Đóng popup
-    if (closeBtn) closeBtn.onclick = function() {
-      popup.style.display = "none";
-      successMsg.style.display = "none"; // Reset message
-    };
-
-    // Đóng popup khi click ra ngoài
-    window.onclick = function(event) {
-      if (event.target === popup) {
-        popup.style.display = "none";
-        successMsg.style.display = "none"; // Reset message
-      }
-    };
-    
-    // Gửi form (Form leadForm)
-    if (form) form.onsubmit = async function(e) {
+  // Navigation
+  document.querySelectorAll('nav.main-nav a').forEach(link => {
+    link.addEventListener('click', e => {
       e.preventDefault();
-      const fd = new FormData(form);
-      try {
-        // Thay thế URL bằng URL Google Apps Script của bạn
-        await fetch("https://script.google.com/macros/s/AKfycbyL_bkqqKk66KXPwsmCGKyHZKfYX8_5QUZ4-Q87mf1JihAXKW5AyjRyP5RUmkEinDmS/exec", {
-          method: "POST",
-          body: fd
-        });
-        successMsg.style.display = "block";
-        form.reset();
-      } catch (err) {
-        alert("Có lỗi khi gửi, vui lòng thử lại!");
-        console.error(err);
-      }
-    };
+      const target = document.getElementById(link.getAttribute('href').substring(1));
+      target?.scrollIntoView({ behavior: 'smooth' });
+    });
   });
+
+  // Register Button
+  document.getElementById('registerBtn').addEventListener('click', () => {
+    document.getElementById('popupBox').style.display = 'block';
+  });
+
+  // Popup
+  const popup = document.getElementById("popupBox");
+  const closeBtn = document.getElementById("closePopup");
+  const form = document.getElementById("leadForm");
+
+  document.getElementById('openPopup').onclick = e => {
+    e.preventDefault();
+    popup.style.display = "block";
+  };
+
+  closeBtn.onclick = () => {
+    popup.style.display = "none";
+  };
+
+  window.onclick = e => {
+    if (e.target === popup) popup.style.display = "none";
+  };
+
+  form.onsubmit = async e => {
+    e.preventDefault();
+    try {
+      await fetch("https://script.google.com/macros/s/AKfycbyL_bkqqKk66KXPwsmCGKyHZKfYX8_5QUZ4-Q87mf1JihAXKW5AyjRyP5RUmkEinDmS/exec", {
+        method: "POST",
+        body: new FormData(form)
+      });
+      document.getElementById("successMsg").style.display = "block";
+      form.reset();
+    } catch (err) {
+      alert("Lỗi gửi dữ liệu!");
+    }
+  };
+});
+
+function toggleSection(el) {
+  const content = el.querySelector('.section-content');
+  if (content) content.classList.toggle('show');
+}
+
+function toggleZone(el) {
+  document.querySelectorAll('.zone-item').forEach(item => {
+    if (item !== el) item.classList.remove('open');
+  });
+  el.classList.toggle('open');
+}
+
+function toggleUtility(el) {
+  document.querySelectorAll('.utility-item').forEach(item => {
+    if (item !== el) item.classList.remove('active');
+  });
+  el.classList.toggle("active");
+}
 </script>
 
 </body>
 </html>
-
-
